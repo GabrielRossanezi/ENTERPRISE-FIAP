@@ -1,0 +1,15 @@
+﻿@model Serie
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Atualização de Série</h1>
+
+<form asp-action="editar" asp-controller="serie">
+    <input asp-for="SerieId" />
+    <partial name="_formulario" />
+    <botao texto="Editar" />
+    <a asp-action="Listar" class="btn btn-dark">Cancelar</a>
+</form>
+

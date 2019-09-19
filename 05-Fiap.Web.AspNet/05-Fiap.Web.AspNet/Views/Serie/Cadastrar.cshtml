@@ -1,0 +1,13 @@
+﻿@model Serie
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h1>Cadastro de Série</h1>
+
+<form asp-action="cadastrar" asp-controller="serie">
+    <partial name="_formulario" />
+    <botao texto="Cadastrar"/>    
+</form>
+

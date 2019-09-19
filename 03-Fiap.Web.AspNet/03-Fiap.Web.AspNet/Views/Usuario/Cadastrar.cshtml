@@ -1,0 +1,35 @@
+﻿@model _03_Fiap.Web.AspNet.Models.Usuario
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h1>Cadastrar</h1>
+
+@if (Model != null)
+{
+    <p>@Model.Nome, @Model.Email, 
+        @Model.DataNascimento</p>
+}
+
+<p>Nome: @ViewData["nome"]</p>
+<p>Data: @ViewData["data"]</p>
+<p>E-mail @ViewBag.endEletronico</p>
+<p>@TempData["msg"]</p>
+
+<form action="/usuario/cadastrar" method="post">
+    <div class="form-group">
+        <label for="id-nome">Nome</label>
+        <input type="text" name="nome" id="id-nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="id-data">Data Nascimento</label>
+        <input type="text" name="dataNascimento" id="id-data" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="id-email">E-mail</label>
+        <input type="text" name="email" class="form-control" id="id-email" />
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+</form>
+
